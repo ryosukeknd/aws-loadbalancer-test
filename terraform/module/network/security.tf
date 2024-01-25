@@ -44,3 +44,30 @@ resource "aws_vpc_security_group_egress_rule" "ice_security_group_outbound" {
 output "security_group_id_for_iec" {
   value = aws_security_group.iec_security_group_for_iec.id
 }
+
+#################################################
+# for Application Load Balancer
+#################################################
+resource "aws_security_group" "alb_security_group" {
+  vpc_id = var.vpc_id
+}
+
+resource "aws_vpc_security_group_egress_rule" "alb_security_outbound" {
+  security_group_id = aws_security_group.alb_security_group.id
+  referenced_security_group_id = aws_security_group.ec2_instance_security_group.id
+  ip_protocol = "TCP"
+  from_port = 8080
+  to_port = 8080
+}
+
+resource "aws_vpc_security_group_ingress_rule" "alb_security_inbound" {
+  security_group_id = aws_security_group.alb_security_group.id
+  cidr_ipv4 = "0.0.0.0/0"
+  ip_protocol = "TCP"
+  from_port = 80
+  to_port = 80
+}
+
+output "security_group_id_for_alb" {
+  value = aws_security_group.alb_security_group.id
+}

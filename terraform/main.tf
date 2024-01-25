@@ -16,7 +16,7 @@ module "ec2" {
 
   source = "./module/ec2"
 
-  ec2_ami = "ami-0cb73cb43eeeab630"
+  ec2_ami = "ami-082b947c0f239bcd0"
   ec2_subnet_id = module.vpc.private_subnets[count.index % 2]
   ec2_az = module.vpc.azs[count.index % 2]
   ec2_security_groups = [
@@ -38,4 +38,7 @@ module "elb" {
   vpc_id = module.vpc.vpc_id
   nlb_subnets = module.vpc.public_subnets
   nlb_target_ec2_list = module.ec2.*.ec2_instance_id
+  alb_security_groups = [module.network.security_group_id_for_alb]
+  alb_subnets = module.vpc.private_subnets
+  alb_target_ec2_list = module.ec2.*.ec2_instance_id
 }
