@@ -8,6 +8,7 @@ resource "aws_instance" "ec2_instance" {
   root_block_device {
     volume_size = 100
   }
+  user_data = file("./script/user_data.sh")
 }
 
 output "ec2_instance_id" {

@@ -14,6 +14,11 @@ resource "aws_lb_target_group" "nlb_target_group" {
   port = 80
   protocol = "TCP"
   vpc_id = var.vpc_id
+
+  health_check {
+    protocol = "HTTP"
+    matcher = "200-299"
+  }
 }
 
 resource "aws_lb_target_group_attachment" "nlb_target_group_attachment" {

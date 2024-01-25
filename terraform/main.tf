@@ -11,7 +11,7 @@ module "vpc" {
   public_subnets  = ["10.0.101.0/24", "10.0.102.0/24"]
 }
 
-module "ec2_base_ami_creator" {
+module "ec2" {
   count = 2
 
   source = "./module/ec2"
@@ -37,5 +37,5 @@ module "elb" {
 
   vpc_id = module.vpc.vpc_id
   nlb_subnets = module.vpc.public_subnets
-  nlb_target_ec2_list = module.ec2_base_ami_creator.*.ec2_instance_id
+  nlb_target_ec2_list = module.ec2.*.ec2_instance_id
 }
