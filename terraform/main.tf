@@ -12,13 +12,13 @@ module "vpc" {
 }
 
 module "ec2" {
-  count = 2
+  count = 4
 
   source = "./module/ec2"
 
   ec2_ami = "ami-0cb73cb43eeeab630"
-  ec2_subnet_id = module.vpc.private_subnets[count.index]
-  ec2_az = module.vpc.azs[count.index]
+  ec2_subnet_id = module.vpc.private_subnets[count.index % 2]
+  ec2_az = module.vpc.azs[count.index % 2]
   ec2_security_groups = [
     module.network.security_group_id_for_ec2
   ]

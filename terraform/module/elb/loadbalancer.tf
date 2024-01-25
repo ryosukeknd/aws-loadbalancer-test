@@ -6,6 +6,7 @@ resource "aws_lb" "nlb" {
   internal = false
   load_balancer_type = "network"
   subnets = var.nlb_subnets
+  enable_cross_zone_load_balancing = false
 }
 
 # nlb target group
@@ -37,3 +38,7 @@ resource "aws_lb_listener" "nlb_listener" {
     target_group_arn = aws_lb_target_group.nlb_target_group.arn
   }
 }
+
+#################################################
+# ALB
+#################################################
