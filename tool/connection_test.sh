@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export API_URL="http://test-nlb-0782560f50a3b87c.elb.us-west-2.amazonaws.com"
+export API_URL="http://test-nlb-40d57d7fbc351540.elb.us-west-2.amazonaws.com"
 export LOG_FILE_PREFIX="asis.disable_cross_zone_load_balancing"
 export SUMMARY_FILE="${LOG_FILE_PREFIX}.summary.txt"
 
@@ -15,7 +15,7 @@ export -f callapi
 
 # 100回のAPI呼び出しを3並列で実行、これを5回繰り返す
 for i in $(seq 1 5);do
-    seq 1 100 | xargs -I{} -L 1 -P 3 bash -c "callapi" > ${LOG_FILE_PREFIX}.${i}.log
+    seq 1 100 | xargs -I{} -L 1 -P 21 bash -c "callapi" > ${LOG_FILE_PREFIX}.${i}.log
     sleep 5
 done
 

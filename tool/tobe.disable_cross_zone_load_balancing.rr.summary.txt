@@ -1,0 +1,58 @@
+# tobe.disable_cross_zone_load_balancing.rr.1.log
+  15 OK :: i-00ef6985c774e25b7 :: pid 1852
+  11 OK :: i-00ef6985c774e25b7 :: pid 1854
+  12 OK :: i-08507e694d002671f :: pid 1851
+  14 OK :: i-08507e694d002671f :: pid 1853
+  11 OK :: i-0a760130daaa00ec1 :: pid 1854
+  13 OK :: i-0a760130daaa00ec1 :: pid 1855
+  13 OK :: i-0b280599ff18463dc :: pid 1853
+  11 OK :: i-0b280599ff18463dc :: pid 1855
+# tobe.disable_cross_zone_load_balancing.rr.2.log
+  25 OK :: i-00ef6985c774e25b7 :: pid 1853
+  12 OK :: i-08507e694d002671f :: pid 1852
+  12 OK :: i-08507e694d002671f :: pid 1854
+  13 OK :: i-0a760130daaa00ec1 :: pid 1853
+  13 OK :: i-0a760130daaa00ec1 :: pid 1856
+  25 OK :: i-0b280599ff18463dc :: pid 1853
+# tobe.disable_cross_zone_load_balancing.rr.3.log
+  60 
+   5 OK :: i-00ef6985c774e25b7 :: pid 1854
+   6 OK :: i-00ef6985c774e25b7 :: pid 1855
+   4 OK :: i-08507e694d002671f :: pid 1851
+   6 OK :: i-08507e694d002671f :: pid 1853
+   6 OK :: i-0a760130daaa00ec1 :: pid 1854
+   4 OK :: i-0a760130daaa00ec1 :: pid 1855
+   4 OK :: i-0b280599ff18463dc :: pid 1855
+   5 OK :: i-0b280599ff18463dc :: pid 1856
+# tobe.disable_cross_zone_load_balancing.rr.4.log
+  21 
+  21 OK :: i-00ef6985c774e25b7 :: pid 1852
+  10 OK :: i-08507e694d002671f :: pid 1853
+  10 OK :: i-08507e694d002671f :: pid 1854
+  19 OK :: i-0a760130daaa00ec1 :: pid 1854
+  19 OK :: i-0b280599ff18463dc :: pid 1853
+# tobe.disable_cross_zone_load_balancing.rr.5.log
+  12 OK :: i-00ef6985c774e25b7 :: pid 1854
+  13 OK :: i-00ef6985c774e25b7 :: pid 1855
+  25 OK :: i-08507e694d002671f :: pid 1851
+  25 OK :: i-0a760130daaa00ec1 :: pid 1854
+  12 OK :: i-0b280599ff18463dc :: pid 1854
+  13 OK :: i-0b280599ff18463dc :: pid 1856
+# summary
+  81 
+  36 OK :: i-00ef6985c774e25b7 :: pid 1852
+  25 OK :: i-00ef6985c774e25b7 :: pid 1853
+  28 OK :: i-00ef6985c774e25b7 :: pid 1854
+  19 OK :: i-00ef6985c774e25b7 :: pid 1855
+  41 OK :: i-08507e694d002671f :: pid 1851
+  12 OK :: i-08507e694d002671f :: pid 1852
+  30 OK :: i-08507e694d002671f :: pid 1853
+  22 OK :: i-08507e694d002671f :: pid 1854
+  13 OK :: i-0a760130daaa00ec1 :: pid 1853
+  61 OK :: i-0a760130daaa00ec1 :: pid 1854
+  17 OK :: i-0a760130daaa00ec1 :: pid 1855
+  13 OK :: i-0a760130daaa00ec1 :: pid 1856
+  57 OK :: i-0b280599ff18463dc :: pid 1853
+  12 OK :: i-0b280599ff18463dc :: pid 1854
+  15 OK :: i-0b280599ff18463dc :: pid 1855
+  18 OK :: i-0b280599ff18463dc :: pid 1856

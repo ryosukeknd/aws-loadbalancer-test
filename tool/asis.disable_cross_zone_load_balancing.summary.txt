@@ -1,27 +1,65 @@
 # asis.disable_cross_zone_load_balancing.1.log
-  38 OK :: i-075046d63c728c7dd
-  50 OK :: i-085f3243fe50fb7f8
-   6 OK :: i-0e250a83fb49e19df
-   6 OK :: i-0e8b090f44e249d03
+  13 OK :: i-00ef6985c774e25b7 :: pid 1852
+  21 OK :: i-00ef6985c774e25b7 :: pid 1853
+  11 OK :: i-00ef6985c774e25b7 :: pid 1854
+   7 OK :: i-00ef6985c774e25b7 :: pid 1855
+   9 OK :: i-0a760130daaa00ec1 :: pid 1853
+  30 OK :: i-0a760130daaa00ec1 :: pid 1854
+   6 OK :: i-0a760130daaa00ec1 :: pid 1855
+   3 OK :: i-0a760130daaa00ec1 :: pid 1856
 # asis.disable_cross_zone_load_balancing.2.log
-  38 OK :: i-075046d63c728c7dd
-  62 OK :: i-085f3243fe50fb7f8
+  12 OK :: i-00ef6985c774e25b7 :: pid 1852
+  23 OK :: i-00ef6985c774e25b7 :: pid 1853
+   2 OK :: i-00ef6985c774e25b7 :: pid 1854
+   7 OK :: i-00ef6985c774e25b7 :: pid 1855
+  24 OK :: i-0a760130daaa00ec1 :: pid 1853
+  15 OK :: i-0a760130daaa00ec1 :: pid 1854
+   9 OK :: i-0a760130daaa00ec1 :: pid 1855
+   8 OK :: i-0a760130daaa00ec1 :: pid 1856
 # asis.disable_cross_zone_load_balancing.3.log
-   3 
-  27 OK :: i-075046d63c728c7dd
-  25 OK :: i-085f3243fe50fb7f8
-  23 OK :: i-0e250a83fb49e19df
-  22 OK :: i-0e8b090f44e249d03
+  60 
+  14 OK :: i-00ef6985c774e25b7 :: pid 1852
+   1 OK :: i-00ef6985c774e25b7 :: pid 1853
+   4 OK :: i-00ef6985c774e25b7 :: pid 1854
+   1 OK :: i-00ef6985c774e25b7 :: pid 1855
+   3 OK :: i-0a760130daaa00ec1 :: pid 1853
+   8 OK :: i-0a760130daaa00ec1 :: pid 1854
+   5 OK :: i-0a760130daaa00ec1 :: pid 1855
+   4 OK :: i-0a760130daaa00ec1 :: pid 1856
 # asis.disable_cross_zone_load_balancing.4.log
-  52 OK :: i-0e250a83fb49e19df
-  48 OK :: i-0e8b090f44e249d03
+  21 
+   4 OK :: i-08507e694d002671f :: pid 1851
+   9 OK :: i-08507e694d002671f :: pid 1852
+   7 OK :: i-08507e694d002671f :: pid 1853
+  18 OK :: i-08507e694d002671f :: pid 1854
+  22 OK :: i-0b280599ff18463dc :: pid 1853
+   8 OK :: i-0b280599ff18463dc :: pid 1854
+   7 OK :: i-0b280599ff18463dc :: pid 1855
+   4 OK :: i-0b280599ff18463dc :: pid 1856
 # asis.disable_cross_zone_load_balancing.5.log
-   5 
-  46 OK :: i-0e250a83fb49e19df
-  49 OK :: i-0e8b090f44e249d03
+   9 OK :: i-08507e694d002671f :: pid 1851
+  20 OK :: i-08507e694d002671f :: pid 1852
+  11 OK :: i-08507e694d002671f :: pid 1853
+  17 OK :: i-08507e694d002671f :: pid 1854
+  15 OK :: i-0b280599ff18463dc :: pid 1853
+  20 OK :: i-0b280599ff18463dc :: pid 1854
+   4 OK :: i-0b280599ff18463dc :: pid 1855
+   4 OK :: i-0b280599ff18463dc :: pid 1856
 # summary
-   8 
- 103 OK :: i-075046d63c728c7dd
- 137 OK :: i-085f3243fe50fb7f8
- 127 OK :: i-0e250a83fb49e19df
- 125 OK :: i-0e8b090f44e249d03
+  81 
+  39 OK :: i-00ef6985c774e25b7 :: pid 1852
+  45 OK :: i-00ef6985c774e25b7 :: pid 1853
+  17 OK :: i-00ef6985c774e25b7 :: pid 1854
+  15 OK :: i-00ef6985c774e25b7 :: pid 1855
+  13 OK :: i-08507e694d002671f :: pid 1851
+  29 OK :: i-08507e694d002671f :: pid 1852
+  18 OK :: i-08507e694d002671f :: pid 1853
+  35 OK :: i-08507e694d002671f :: pid 1854
+  36 OK :: i-0a760130daaa00ec1 :: pid 1853
+  53 OK :: i-0a760130daaa00ec1 :: pid 1854
+  20 OK :: i-0a760130daaa00ec1 :: pid 1855
+  15 OK :: i-0a760130daaa00ec1 :: pid 1856
+  37 OK :: i-0b280599ff18463dc :: pid 1853
+  28 OK :: i-0b280599ff18463dc :: pid 1854
+  11 OK :: i-0b280599ff18463dc :: pid 1855
+   8 OK :: i-0b280599ff18463dc :: pid 1856
