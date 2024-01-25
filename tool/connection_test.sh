@@ -1,10 +1,27 @@
 #!/bin/bash
 
+export API_URL="http://test-nlb-0782560f50a3b87c.elb.us-west-2.amazonaws.com"
+export LOG_FILE_PREFIX="asis.disable_cross_zone_load_balancing"
+export SUMMARY_FILE="${LOG_FILE_PREFIX}.summary.txt"
+
+rm ${LOG_FILE_PREFIX}*
+
 function callapi() {
-    resp=$(curl -s http://test-nlb-b3de6b9758d1511f.elb.us-west-2.amazonaws.com)
+    resp=$(curl -s ${API_URL})
     echo $resp
 }
 
 export -f callapi
 
-seq 1 100 | xargs -I{} -L 1 -P 4 bash -c "callapi"
+# 100回のAPI呼び出しを3並列で実行、これを5回繰り返す
+for i in $(seq 1 5);do
+    seq 1 100 | xargs -I{} -L 1 -P 3 bash -c "callapi" > ${LOG_FILE_PREFIX}.${i}.log
+    sleep 5
+done
+
+for FILE in $(ls ${LOG_FILE_PREFIX}*.log);do
+    echo "# ${FILE}" >> ${SUMMARY_FILE}
+    cat ${FILE} | sort | uniq -c >> ${SUMMARY_FILE}
+done
+echo "# summary" >> ${SUMMARY_FILE}
+cat ${LOG_FILE_PREFIX}*.log | sort | uniq -c >> ${SUMMARY_FILE}

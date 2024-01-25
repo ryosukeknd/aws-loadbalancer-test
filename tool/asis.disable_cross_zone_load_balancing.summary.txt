@@ -1,0 +1,27 @@
+# asis.disable_cross_zone_load_balancing.1.log
+  38 OK :: i-075046d63c728c7dd
+  50 OK :: i-085f3243fe50fb7f8
+   6 OK :: i-0e250a83fb49e19df
+   6 OK :: i-0e8b090f44e249d03
+# asis.disable_cross_zone_load_balancing.2.log
+  38 OK :: i-075046d63c728c7dd
+  62 OK :: i-085f3243fe50fb7f8
+# asis.disable_cross_zone_load_balancing.3.log
+   3 
+  27 OK :: i-075046d63c728c7dd
+  25 OK :: i-085f3243fe50fb7f8
+  23 OK :: i-0e250a83fb49e19df
+  22 OK :: i-0e8b090f44e249d03
+# asis.disable_cross_zone_load_balancing.4.log
+  52 OK :: i-0e250a83fb49e19df
+  48 OK :: i-0e8b090f44e249d03
+# asis.disable_cross_zone_load_balancing.5.log
+   5 
+  46 OK :: i-0e250a83fb49e19df
+  49 OK :: i-0e8b090f44e249d03
+# summary
+   8 
+ 103 OK :: i-075046d63c728c7dd
+ 137 OK :: i-085f3243fe50fb7f8
+ 127 OK :: i-0e250a83fb49e19df
+ 125 OK :: i-0e8b090f44e249d03
