@@ -6,7 +6,7 @@ resource "aws_lb" "nlb" {
   internal = false
   load_balancer_type = "network"
   subnets = var.nlb_subnets
-  enable_cross_zone_load_balancing = true
+  enable_cross_zone_load_balancing = false
 }
 
 # nlb target group
@@ -55,7 +55,7 @@ resource "aws_lb_target_group" "alb_target_group" {
   port = 80
   protocol = "HTTP"
   vpc_id = var.vpc_id
-  load_balancing_algorithm_type = "round_robin"
+  load_balancing_algorithm_type = "least_outstanding_requests"
 
   health_check {
     protocol = "HTTP"
